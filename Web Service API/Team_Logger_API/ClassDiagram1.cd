@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical">
+  <Class Name="Team_Logger_API.Controllers.AnnouncmentsController">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAABAAAAAAAAAAAAAAAAAAAAIQACAAAA=</HashCode>
+      <FileName>Controllers\AnnouncmentsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.App_LoginController">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\App_LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Creat_Team_Controller">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQCBAAABBAAAAAAQAIAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Controllers\Creat_Team_Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Get_AnnController">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAACAAAAABBAAAAAAAAAAAAQAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Controllers\Get_AnnController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Get_Members_For_Reports">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAABAAAAAAAAAAAAAAAQAAAAIQAAAAAA=</HashCode>
+      <FileName>Controllers\Get_Members_For_ReportsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Get_MembersController">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAABAAAAAAAAAAAAAAAQAAAAIQAAAAAA=</HashCode>
+      <FileName>Controllers\Get_MembersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Get_ReportsController">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAACIAAAABAAAAIgAAAEAAAAAABBAAAQAAAAAA=</HashCode>
+      <FileName>Controllers\Get_ReportsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.GetNameController">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\GetNameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.GetTasksController">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Team_Logger_API.Controllers.GetTasksController.Tasks_result" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\GetTasksController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABCAAAAQBAAAAAAAACAAAAAAAAAAAIQIAAAAA=</HashCode>
+      <FileName>Controllers\GetTasksController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.GetTeamsController">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAACAAAAABIAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Controllers\GetTeamsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Join_TeamController">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgACEAAAABAAAAAAAAAAAAAAAAAAAAIQAAAAAA=</HashCode>
+      <FileName>Controllers\Join_TeamController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Leave_Team_AdminController" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAABAAAAAAAAAAAAAAAAAAAAAQAIAAAA=</HashCode>
+      <FileName>Controllers\Leave_Team_AdminController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Leave_TeamController">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAABAAAAAAAAAAAAAAAAAAAAAQAIAAAA=</HashCode>
+      <FileName>Controllers\Leave_TeamController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.LiveController">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\LiveController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.New_AccountController">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQCBAAAABAAAAAAQAICAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Controllers\New_AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Recived_Reports_MembersController">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAABAAAAAAAAAAAAAAAQAAAAIQAAAAAA=</HashCode>
+      <FileName>Controllers\Recived_Reports_MembersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Send_ReportController">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgAAACCAAAABAAECMAAwACAAAAAgAqABAQAAAAAA=</HashCode>
+      <FileName>Controllers\Send_ReportController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.SignOutController">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\SignOutController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.Ann_Result">
+    <Position X="20.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\Ann_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.Announcment">
+    <Position X="22.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAgAAAEAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Announcment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.Day">
+    <Position X="22.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAQAAAAAAAAAAAAAAAAAAABAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Day.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.DB_Connection">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQAAAAAAAAAIEEAAAAAAAAAAQAAAAAAABAAA=</HashCode>
+      <FileName>Models\DB_Connection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.GF">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAACEAAAAAAAAQAAAAAAAQAAAAAAAAAQABCAAA=</HashCode>
+      <FileName>Models\GF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.Report">
+    <Position X="18.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAwAAAAAACAAAAAAAAAQAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.Report_Result">
+    <Position X="22.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Report_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.Team">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACkgAAAQAQQAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\Team.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Models.Team_result">
+    <Position X="20.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Team_result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Get_TeamMembers_Result">
+    <Position X="18.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Models\Get_TeamMembers_Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Team_Logger_API.Controllers.Team_Member">
+    <Position X="20.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAQAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\Team_Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
