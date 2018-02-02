@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.TeamInterfacePageUser8"
+             Title="Team Interface">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout x:Name="TeamDetails">
+                <Label Margin="0,40,0,0"  Text="{Binding Team_Name}" HorizontalOptions="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="stacklayout1">
+                
+                <Label Text="Logged in as:"/>
+                
+                <Label x:Name="Label1" Text="{Binding UserName}" />
+
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+               
+                <Label Text="Member Title: "/>
+
+                    <Label Text="{Binding Title}"/>
+           
+                </StackLayout>
+
+                <StackLayout Margin="0,50,0,0" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Button Text="Send a report"  x:Name="_button" FontSize="Small" WidthRequest="150" HeightRequest="100"
+                        Clicked="Clicked_SendReport"/>
+               
+                <Button Text="Messages from Manager" FontSize="Small" WidthRequest="150" HeightRequest="100" 
+                        Clicked="Clicked_MessagesFromAdmin"/>
+            
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                
+                <Button Text="Announcments" FontSize="Small" WidthRequest="150" 
+                        HeightRequest="100" Clicked="Clicked_Announcments"/>
+                
+                <Button Text="Reports Sent" FontSize="Small" WidthRequest="150"
+                        HeightRequest="100" Clicked="Clicked_ReportsSent"/>
+            
+            </StackLayout>
+
+                <StackLayout  HorizontalOptions="Center" Orientation="Horizontal">
+
+                    <Button Text="Leave Team" WidthRequest="120" HorizontalOptions="Center" 
+                    Margin="0,40,0,0" Clicked="Clicked_LeaveTeam" />
+
+                    <Button HorizontalOptions="Center" Margin="0,40,0,0" 
+                            WidthRequest="120" Text="Teams dashboard" Clicked="Clicked_TeamsDashboard"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

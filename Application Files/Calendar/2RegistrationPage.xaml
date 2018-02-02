@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  Title="Registration" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.RegistrationPage2">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Please enter your details to create a new account" HorizontalOptions="Center" Margin="0,30,0,0" />
+                <StackLayout Margin="0,40,50,0" Orientation="Horizontal" >
+                    <Label Text="Name:" Margin="30,0" VerticalOptions="Center"/>
+                    <Entry x:Name="Fname" WidthRequest="170" HorizontalOptions="EndAndExpand"  Focused="Enrtyclick" Unfocused="Check_Text"/>
+                </StackLayout>
+
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal">
+                    <Label Text="Surname:"  VerticalOptions="Center"/>
+                    <Entry x:Name="Lname" WidthRequest="170" HorizontalOptions="EndAndExpand"  Focused="Enrtyclick" Unfocused="Check_Text"/>
+                </StackLayout>
+
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal">
+                    <Label Text="E-Mail:"   VerticalOptions="Center"/>
+                    <Entry x:Name="email_reg" WidthRequest="170" HorizontalOptions="EndAndExpand" Keyboard="Email" Focused="Enrtyclick" Unfocused="Check_Text"/>
+                </StackLayout>
+
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal">
+                    <Label Text="Re-type E-Mail:"  VerticalOptions="Center"/>
+                    <Entry x:Name="re_email_reg" WidthRequest="170" HorizontalOptions="EndAndExpand" Keyboard="Email" Focused="Enrtyclick" Unfocused="Check_Text"/>
+                </StackLayout>
+
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal">
+                    <Label Text="Password:"  VerticalOptions="Center"/>
+                    <Entry x:Name="password_reg" WidthRequest="170" HorizontalOptions="EndAndExpand"  IsPassword="True"  Focused="Enrtyclick" Unfocused="Check_Text"/>
+                </StackLayout>
+
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal" >
+                    <Label  Text="Re-type Password:" VerticalOptions="Center"/>
+                    <Entry x:Name="re_password_reg" WidthRequest="170" HorizontalOptions="EndAndExpand"   IsPassword="True" Focused="Enrtyclick" Unfocused="Check_Text"/>
+                </StackLayout>
+
+                <Grid  HeightRequest="150" WidthRequest="150" Padding="5,0,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="0" x:Name="RegisterImage" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Clicked_Confirm_Registration" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+                    <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="1" x:Name="BackButton"  >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Clicked_Cancel" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+                </Grid>
+
+                    <!--<Button HorizontalOptions="Center" Margin="0,30,0,0" Text="Register" Clicked="Clicked_Confirm_Registration"  />
+                    <Button HorizontalOptions="Center" Margin="0,30,0,0" Text="Cancel" Clicked="Clicked_Cancel"  />-->
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

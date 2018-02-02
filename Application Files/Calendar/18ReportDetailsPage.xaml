@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.ReportDetailsPage18"
+             Title="Report Details"
+             >
+    <ContentPage.Content >
+        <ScrollView BackgroundColor="Transparent" Margin="0,10,0,0">
+            <StackLayout Margin="15" x:Name="CurrentStackLayout" >
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text="Report Sent: "/>
+                    <Label Text="{Binding Date_Sent, StringFormat='{0: dd/MM/yyyy HH\\:mm }'}"/>
+                </StackLayout>
+
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5,0,0">
+                    <Label Text="Report Sent by: "/>
+                    <Label x:Name="UserNameLabel" Text="{Binding UserName}" />
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" >
+                    <Label Text="Task Name: "/>
+                    <Label Text="{Binding Task_Name}"/>
+                </StackLayout>
+
+                <Label Text="Hours Worked:"/>
+
+                <ScrollView BackgroundColor="Transparent" Margin="0,3,0,0">
+                    <ListView IsEnabled="False" x:Name="DateHoursListview" SeparatorVisibility="None" RowHeight="20"  VerticalOptions="Start" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                                            <Label Text="{Binding Date, StringFormat='{0: dd/MM/yyyy}'}"/>
+                                            <Label Text=" - "/>
+                                            <Label Text="{Binding Hours}"/>
+                                            <Label Text="Hours"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+
+
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,10,0,0">
+                    <Label Text="Total Hours Worked: "/>
+                    <Label Text="{Binding Hours}"/>
+                </StackLayout>
+
+
+                <Label Text="Description:" Margin="0,5,0,0"/>
+                <Label Text="{Binding Description}" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" Margin="40,3,40,0" BackgroundColor="LightGray" VerticalOptions="FillAndExpand"/>
+
+                <Button Text="Go Back" Clicked="GoBackClicked" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,20"/>
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

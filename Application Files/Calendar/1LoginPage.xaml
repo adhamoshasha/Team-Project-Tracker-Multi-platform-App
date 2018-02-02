@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.LoginPage1"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Priority="1" Clicked="ToolbarItem_Clicked"
+                     Icon="Info.png"  />
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Image x:Name="BackGroundImage" Aspect="AspectFill"/>
+            <ScrollView>
+
+                <StackLayout VerticalOptions="Fill"   Spacing="10">
+                    <Image x:Name="InfoIcon" Aspect="AspectFill" HorizontalOptions="End" HeightRequest="40" WidthRequest="40">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ToolbarItem_Clicked" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+
+                    <StackLayout Margin="5,30,5,0"  VerticalOptions="Fill"  >
+                        <!--<Label Margin="0,50,0,0" Text="Team Project Tracker" HorizontalOptions="Center" TextColor="Black" FontSize="Medium" />-->
+                        <Image x:Name="LOGOImage" Aspect="AspectFill" HorizontalOptions="Center"/>
+                        <Label  Text="Connection Failed" Margin="0,5,0,0"  TextColor="Red" HorizontalOptions="Center" x:Name="RetryLabel"  IsVisible="False"/>
+                        <Label Text="Successfully Reconnected" Margin="0,5,0,0" TextColor="Green" HorizontalOptions="Center" x:Name="successlabel"  IsVisible="False"/>
+                        <!--<Button Text="Retry" Clicked="connection_check" HorizontalOptions="Center" x:Name="RetryButton" IsVisible="False"/>-->
+                        <Image  x:Name="RetryButton" Aspect="AspectFill" HorizontalOptions="Center" IsVisible="False">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="connection_check" NumberOfTapsRequired="1"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+
+
+                        <StackLayout Margin="30,110,50,0" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <!--<Label Text="   E-Mail:" HorizontalOptions="Start" VerticalOptions="Center"/>-->
+
+
+                            <Entry x:Name="EntryEmail" Placeholder="Email Address" WidthRequest="220" HorizontalOptions="Center" Keyboard="Email"  />
+
+                        </StackLayout>
+
+                        <StackLayout Margin="30,20,50,0" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <!--<Label Text="Password:" HorizontalOptions="Start" VerticalOptions="Center" />-->
+                            <Entry x:Name="EntryPassword" Placeholder="Password" WidthRequest="220" HorizontalOptions="Center" IsPassword="True" />
+                        </StackLayout>
+
+
+                    </StackLayout>
+                    <Grid Margin="0,20,0,0" HeightRequest="150" Padding="5,0,5,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Image   x:Name="LoginImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Margin="10,0,0,0" Grid.Row="0" Grid.Column="0" MinimumHeightRequest="28">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLoginClicked" NumberOfTapsRequired="1"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                        <Image HorizontalOptions="FillAndExpand" x:Name="RegisterImage" VerticalOptions="FillAndExpand" Margin="0,0,10,0" Grid.Row="0" Grid.Column="1" MinimumHeightRequest="28">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnRegisterClicked" NumberOfTapsRequired="1"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+
+
+
+
+                    <!--<Button HorizontalOptions="CenterAndExpand" x:Name="LogIn_Button" Margin="0,10,30,0" Text="Log-In" Clicked="OnLoginClicked" VerticalOptions="End"/>-->
+                    <!--<Button HorizontalOptions="CenterAndExpand" x:Name="Registration_Button" Margin="0,10,30,0" Text="Register" Clicked="OnRegisterClicked" VerticalOptions="End"/>-->
+
+
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

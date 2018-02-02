@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effects="clr-namespace:Calendar"
+             
+             x:Class="Calendar.CustomView">
+  
+    <ContentView.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="{Binding DateString}"  VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" BackgroundColor="{Binding DateColor}" Grid.Column="0" Grid.Row="0" Opacity="1.00"  />
+            <Label Text="{Binding Hours, StringFormat='{0:0.#}h'}" FontSize="8"  TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="{Binding HourColor}" Grid.Column="1" Grid.Row="0" Opacity="1.00"/>
+            <BoxView  Grid.Column="0" HorizontalOptions="FillAndExpand" Grid.Row="0" BackgroundColor="{Binding DateHourColor}" Grid.RowSpan="2" Grid.ColumnSpan="2"  Opacity="0.70" />
+            <Entry  Keyboard="Numeric"  IsEnabled="{Binding EntryStatus}" Text="{Binding Entry }"  HorizontalTextAlignment="Center" FontSize="Micro" BackgroundColor="{Binding EntryColor}" Placeholder="0" PlaceholderColor="Gray" Opacity="1.00" TextColor="Black" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                <Entry.Effects>
+                    <effects:FocusEffect />
+                    <effects:FocusEffectWin />
+                </Entry.Effects>
+            </Entry>
+            <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+            <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+            <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="Black" WidthRequest="1" HorizontalOptions="Start" VerticalOptions="FillAndExpand"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.ReportsSentPage12"
+             Title="Reports Sent">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout>
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Team Manager:" />
+                    <Label x:Name="Label1" />
+                </StackLayout>
+
+                <ListView  x:Name="ReportsSentList" Margin="0,20,0,0" ItemSelected="SelectedItemList" ItemTapped="TappedItemList" SeparatorColor="Black" RowHeight="70" BackgroundColor="Azure" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout  Margin="2,2,2,2" BackgroundColor="White" >
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                                        <Label Text="Report Sent: "/>
+                                        <Label Text="{Binding Date_Sent, StringFormat='{0: dd/MM/yyyy HH\\:mm }'}"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                                        <Label Text="Task Name: "/>
+                                        <Label Text="{Binding Task_Name}"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                                        <Label Text="Total Hours Worked: "/>
+                                        <Label Text="{Binding Hours}"/>
+                                        <Label Text="hours"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

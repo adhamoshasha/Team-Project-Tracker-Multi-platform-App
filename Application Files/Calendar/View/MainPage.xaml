@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Calendar"  
+             xmlns:view="clr-namespace:Calendar.View"
+             x:Class="Calendar.MainPage"
+             Title="Send a Report">
+
+    <!--LOCAL is for the view model, view is for Calendar-->
+
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <!--created an instance of main view model and assigned it to the main page as a binding context. in the calendar, the same 
+    instance needs to be used and not a seperate new one, as such i use binding . to refer to the same instance-->
+
+    <ScrollView>
+        <StackLayout MinimumWidthRequest="300" MinimumHeightRequest="300" Padding="10,0">
+            <view:Calendar BindingContext="{Binding .}"/>
+
+
+            <!--<StackLayout Margin="30,0" Orientation="Horizontal" VerticalOptions="End" >
+                <Label VerticalOptions="Center"  Text="Task Name:"/>
+                <Picker x:Name="TaskNamePicker" Title="Select Task" WidthRequest="170" HorizontalOptions="EndAndExpand" 
+                        SelectedIndexChanged="SelectedPickerTask"/>
+            </StackLayout >
+
+
+            <StackLayout Margin="30,0" Orientation="Horizontal" VerticalOptions="End" >
+                <Label  x:Name="NewTaskLabel"  VerticalOptions="Center" Text="New Task Name:" />
+                <Entry  x:Name="NewTaskEntry"   WidthRequest="170" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+
+
+            <StackLayout BackgroundColor="Black" Padding="1" HorizontalOptions="Center">
+                <Editor x:Name="ReportDetails" BackgroundColor="White" HeightRequest="200" HorizontalOptions="Center" WidthRequest="280" />
+            </StackLayout>-->
+
+
+
+
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
+                <Button Text="Send Report" Command="{Binding SendReportButton}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Button Text="Reset Calendar" VerticalOptions="Center" Command="{Binding ResetButton}" HorizontalOptions="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

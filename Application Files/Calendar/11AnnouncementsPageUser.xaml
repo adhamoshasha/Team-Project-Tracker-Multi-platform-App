@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.AnnouncementsPageUser11"
+             Title="Announcements">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <Label  Text="Team Manager:" />
+                <Label x:Name="Label1" />
+            </StackLayout>
+
+            <ScrollView BackgroundColor="Azure" VerticalOptions="StartAndExpand">
+                <ListView x:Name="AnnouncmentsList"  ItemSelected="SelectedItemList" ItemTapped="TappedItemList" SeparatorColor="Black" RowHeight="90">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="2,2,2,2" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Margin="30,0,20,0">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,10,0,0" VerticalOptions="Start" >
+                                            <Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}" FontSize="Small"/>
+                                            <Label Text="/"/>
+                                            <Label Text="{Binding Time, StringFormat='{}{0:hh\\:mm}'}" FontSize="Small"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,0,0,10" VerticalOptions="EndAndExpand">
+                                            <Label Text="Title:" HorizontalOptions="Start" FontSize="Medium"/>
+                                            <Label Text="{Binding AnnouncmentTitle}" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

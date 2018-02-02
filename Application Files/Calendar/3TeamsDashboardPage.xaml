@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="MYTESTPAGE"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Calendar.MarkupExtensions" 
+             x:Class="Calendar.TeamsDashboardPage3"
+             Title="Teams Dashboard">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Priority="1" Clicked="ToolbarItem_Clicked"
+                     Icon="Help.png"  />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Joined Teams" HorizontalOptions="Center" />
+            <!--<Label x:Name="EmptyListLabel" IsVisible="{Binding IsEmpty}" Text="You are not a member of any Team.(BETA)" HorizontalOptions="Center" />-->
+
+
+            <ScrollView BackgroundColor="Azure">
+
+                <ListView  VerticalOptions="StartAndExpand" x:Name="JoinedTeamsList" ItemSelected="SelectedListItem" ItemTapped="TappedListItem" 
+                           SeparatorColor="Black" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell >
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Leave/Delete Team" Clicked="ContextDeleteClicked" CommandParameter="{Binding .}" IsDestructive="True" />
+                                </ViewCell.ContextActions>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="2,2,2,2" BackgroundColor="White">
+
+                                    <Label VerticalOptions="Center" Margin="40,0,0,0" Text="{Binding Team_Name}" />
+
+
+
+                                    <StackLayout MinimumHeightRequest="50" MinimumWidthRequest="50" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+
+
+                                        <Image VerticalOptions="Center"   Source="{local:EmbeddedImage Calendar.Images.Admin_Icon.png}"    IsVisible="{Binding Admin}"/>
+                                        <!--IsVisible="{Binding Admin}"-->
+                                    </StackLayout>
+
+                                    <StackLayout MinimumHeightRequest="50" VerticalOptions="Center" MinimumWidthRequest="50" HorizontalOptions="End">
+
+                                        <Image  VerticalOptions="Center"  Margin="10,0,10,0"  Source="{local:EmbeddedImage Calendar.Images.Notification_Icon_off.png}"   IsVisible="{Binding Notification2}"/>
+                                        <Image  VerticalOptions="Center"  Margin="10,0,10,0"  Source="{local:EmbeddedImage Calendar.Images.Notification_Icon.png }"   IsVisible="{Binding Notification}"/>
+                                        <!--IsVisible="{Binding Notification}"-->
+
+                                    </StackLayout>
+
+                                </StackLayout>
+
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+            <StackLayout Orientation="Horizontal"  VerticalOptions="End">
+                <Image VerticalOptions="Center" Margin="30,0,0,0"    Source="{local:EmbeddedImage Calendar.Images.Admin_Icon.png}" />
+                <Label Text="=  Administrator" VerticalTextAlignment="Center" />
+                <Image  VerticalOptions="Center" HorizontalOptions="EndAndExpand"  Source="{local:EmbeddedImage Calendar.Images.Notification_Icon.png }" />
+                <Label Text="=  Notification" VerticalTextAlignment="Center" Margin="0,0,30,0"/>
+            </StackLayout>
+        
+
+            <!--<Button Text="Create Team" WidthRequest="120" Clicked="Clicked_CreateTeam"/>
+                <Button Text="Join Team" WidthRequest="120" Clicked="Clicked_JoinTeam"/>-->
+
+            <Grid  HeightRequest="150"  Margin="0,10,0,20"  Padding="5,0,5,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+
+                <Image  x:Name="CreateImage"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Clicked_CreateTeam" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+                <Image  x:Name="JoinImage"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Clicked_JoinTeam" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+                <Image  x:Name="LogoutImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Clicked_Signout" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                
+            </Grid>
+
+            <!--<Button Text="Signout" WidthRequest="120" Clicked="Clicked_Signout"/>-->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

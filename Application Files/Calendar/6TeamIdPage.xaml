@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Team Created Successfully"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.TeamIdPage6">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Center" Margin="30,50,30,0" Text="A team was successfully created. Give the following team ID and password to your team members" />
+
+            <StackLayout Margin="0,50,0,0"  HorizontalOptions="Center" Orientation="Horizontal">
+                <Label HorizontalOptions="Center" Text="Team ID:"/>
+                <Label x:Name="IdLabel" Text="{Binding Team_Id}"   FontAttributes="Bold" />
+            </StackLayout>
+
+            <StackLayout Margin="0,30,0,0"  HorizontalOptions="Center" Orientation="Horizontal">
+                <Label HorizontalOptions="Center" Text="Password:"/>
+                <Label x:Name="PasswordLabel" Text="{Binding Password}"/>
+            </StackLayout>
+
+            <!--<Button Text="Continue" WidthRequest="170" HorizontalOptions="Center" Margin="0,40,0,0" Clicked="Clicked_Continue"/>-->
+            <Grid  HeightRequest="150" WidthRequest="150"  Margin="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Image   x:Name="ContinueImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="0"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Clicked_Continue" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

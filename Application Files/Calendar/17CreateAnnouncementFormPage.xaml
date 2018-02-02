@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.CreateAnnouncementFormPage17"
+             Title="Create an Announcement">
+    <ContentPage.Content>
+        <ScrollView>
+            
+        <StackLayout>
+            <StackLayout Margin="50,40,50,0" Orientation="Horizontal">
+                <Label Text="Title:"   VerticalOptions="Center"/>
+                <Entry x:Name="Title_Entry" WidthRequest="170" HorizontalOptions="EndAndExpand" Margin="0,0,60,0"/>
+            </StackLayout>
+
+            <Label Text="Message:" Margin="50,30,0,0" />
+
+            <StackLayout BackgroundColor="Black" Padding="1" HorizontalOptions="Center">
+                <Editor x:Name="Ann_Content" BackgroundColor="White" HeightRequest="200" HorizontalOptions="Center" WidthRequest="280" />
+            </StackLayout>
+
+            <StackLayout  HorizontalOptions="Center" Orientation="Horizontal">
+                <Button HorizontalOptions="Center" Margin="0,30,0,0" Text="Send Announcement" Clicked="Clicked_SendAnnouncement"  />
+                <Button HorizontalOptions="Center" Margin="0,30,0,0" Text="Cancel" Clicked="Clicked_Cancel"  />
+            </StackLayout>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

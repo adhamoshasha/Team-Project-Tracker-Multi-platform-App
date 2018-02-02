@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.TeamCreationPage4"
+             Title="Team Creation">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Margin="0,50,0,0" Text="Fill out the details below to create a new team" HorizontalOptions="Center"/>
+                <StackLayout Margin="30,70,50,0" Orientation="Horizontal">
+                    <Label  Text="Team Name:"  VerticalOptions="Center"/>
+                    <Entry x:Name="TeamNameEntry" WidthRequest="170" HorizontalOptions="EndAndExpand"  />
+                </StackLayout>
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal">
+                    <Label   Text="Password:"  VerticalOptions="Center"/>
+                    <Entry x:Name="passwordEntry" WidthRequest="170" HorizontalOptions="EndAndExpand" IsPassword="True"  />
+                </StackLayout>
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal">
+                    <Label    Text="Re-Type Password:"  VerticalOptions="Center"/>
+                    <Entry x:Name="re_PasswordEntry" WidthRequest="170" HorizontalOptions="EndAndExpand" IsPassword="True" />
+                </StackLayout>
+                <!--<StackLayout  HorizontalOptions="Center" Orientation="Horizontal">
+                    <Button HorizontalOptions="Center" WidthRequest="150" Margin="0,30,0,0" Text="Create Team" Clicked="Clicked_ConfirmTeamCreation"  />
+                    <Button HorizontalOptions="Center" WidthRequest="150" Margin="0,30,0,0" Text="Cancel" Clicked="Clicked_CancelTeamCreation"  />
+                </StackLayout>-->
+
+                <Grid  HeightRequest="150" WidthRequest="150" Padding="5,0,5,0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image   x:Name="CreateImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="0" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="Clicked_ConfirmTeamCreation" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image x:Name="GoBackImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="1">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Clicked_CancelTeamCreation" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

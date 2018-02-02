@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.JoinTeamPage5"
+             Title="Join a team">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label HorizontalTextAlignment="Start" Margin="70,60,80,0" 
+                   Text="Enter the ID and Password provided by the Manager of the team" />
+
+                <StackLayout Margin="30,50,50,0" Orientation="Horizontal">
+                    <Label Text="Team ID:"  VerticalOptions="Center"/>
+                    <Entry x:Name="IdEntry"  WidthRequest="170" HorizontalOptions="EndAndExpand"  />
+                </StackLayout>
+
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal">
+                    <Label Text="Password:"  VerticalOptions="Center"/>
+                    <Entry x:Name="PasswordEntry" WidthRequest="170" HorizontalOptions="EndAndExpand" IsPassword="True" />
+                </StackLayout>
+
+                <StackLayout Margin="30,30,50,0" Orientation="Horizontal">
+                    <Label Text="Member Title:"  VerticalOptions="Center"/>
+                    <Entry x:Name="TitleEntry" WidthRequest="170" HorizontalOptions="EndAndExpand"  />
+                </StackLayout>
+                <!--<StackLayout  HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="End" Margin="20,0,20,30">
+                    <Button Text="Join Team" WidthRequest="170" HorizontalOptions="Center" 
+                    Margin="0,40,0,0" Clicked="Clicked_JoinTeam"/>
+                    <Button HorizontalOptions="Center" Margin="0,40,0,0" WidthRequest="170" Text="Cancel" Clicked="Clicked_CancelTeamJoin"  />
+                </StackLayout>-->
+
+
+                <Grid  HeightRequest="150" WidthRequest="150"  Padding="5,0,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image   x:Name="JoinImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="0" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Clicked_JoinTeam" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image x:Name="GoBackImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="1">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Clicked_CancelTeamJoin" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

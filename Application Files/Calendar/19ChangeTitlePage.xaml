@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.ChangeTitlePage19">
+    <ContentPage.Content>
+        <StackLayout Margin="30,30,30,30" HorizontalOptions="Center">
+
+
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Selected User: " />
+                <Label x:Name="LabelName" Text="{Binding Name}" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Current Title: " />
+                <Label x:Name="LabelTitle" Text="{Binding Title}" />
+            </StackLayout>
+            
+
+            <StackLayout Margin="0,30,0,0" Orientation="Horizontal" >
+                <Label VerticalOptions="Center" Text="New Title: " />
+                <Entry x:Name="NewTitleEntry" WidthRequest="150" />
+            </StackLayout>
+
+            <StackLayout Margin="0,30,0,0" HorizontalOptions="Center" Orientation="Horizontal">
+                <Button HorizontalOptions="Center" x:Name="ConfirmButton" Margin="0,30,0,0" Text="Confirm" Clicked="ConfirmButton_Clicked" />
+                <Button HorizontalOptions="Center" x:Name="CancelButton" Margin="0,30,0,0" Text="Cancel" Clicked="CancelButton_Clicked" />
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

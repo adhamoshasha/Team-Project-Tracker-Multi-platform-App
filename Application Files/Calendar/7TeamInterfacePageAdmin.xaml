@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calendar.TeamInterfacePageAdmin7"
+             Title="Team Interface">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Image x:Name="IDIcon" Aspect="AspectFill" HorizontalOptions="End" HeightRequest="40" WidthRequest="40" Margin="0,10,10,0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ToolbarItem_Clicked" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+
+                </Image>
+
+
+                <Label Margin="0,20,0,0" HorizontalOptions="Center" x:Name="TeamNameLabel" Text="{Binding Team_Name}" />
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                    <Label Text="Logged in as:"/>
+
+                    <Label x:Name="Label1" Text="{Binding UserName}" />
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                    <Label Text="Manager" FontAttributes="Bold"/>
+
+                    <!--this can be made as an icon of admin-->
+
+                </StackLayout>
+
+                <StackLayout Margin="0,50,0,0" Orientation="Horizontal" 
+                             HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Button Text="View Reports" FontSize="Small" WidthRequest="150" 
+                            HeightRequest="100" Clicked="Clicked_ViewReports"/>
+
+                    <Button Text="Send a Message" FontSize="Small" WidthRequest="150" 
+                            HeightRequest="100" Clicked="Clicked_SendMessage"/>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                    <Button Text="Create Announcment" FontSize="Small"
+                            WidthRequest="150" HeightRequest="100" Clicked="Clicked_CreateAnnouncement"/>
+
+                    <Button Text="Team Members" FontSize="Small" WidthRequest="150" 
+                            HeightRequest="100" Clicked="Clicked_TeamMembers"/>
+
+                </StackLayout>
+
+                <StackLayout  HorizontalOptions="Center" Orientation="Horizontal">
+
+                    <Button Text="Delete Team" WidthRequest="170" 
+                            HorizontalOptions="Center" Margin="0,40,0,0" Clicked="Clicked_DeleteTeam" />
+
+                    <Button HorizontalOptions="Center" Margin="0,40,0,0" 
+                            WidthRequest="170" Text="Teams dashboard" 
+                            Clicked="Clicked_TeamsDashboard"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

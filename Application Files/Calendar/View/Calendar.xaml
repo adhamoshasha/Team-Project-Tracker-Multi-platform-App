@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Calendar"  
+             x:Class="Calendar.View.Calendar"
+             xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HeaderLabels" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment"
+                        Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Grid.Row" Value="1" />
+                <Setter Property="Grid.ColumnSpan" Value="2" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Fill" />
+
+            </Style>
+            <Style x:Key="DateLabels" TargetType="Label">
+                <Setter Property="VerticalTextAlignment"  Value="Center" />
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Grid.ColumnSpan" Value="4" />
+            </Style>
+
+            <Style x:Key="BoxViews" TargetType="BoxView">
+                <Setter Property="Grid.Column" Value="0" />
+                <Setter Property="Grid.ColumnSpan" Value="14" />
+                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="1" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+
+            </Style>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <StackLayout>
+        <Grid Padding="0" ColumnSpacing="0" RowSpacing="0"  WidthRequest="320" HorizontalOptions="Center">
+
+        <Grid.RowDefinitions >
+            <RowDefinition Height="33" />
+            <RowDefinition Height="28" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+
+        </Grid.ColumnDefinitions>
+        <BoxView BackgroundColor="#dddddd" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="14" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <Button  Grid.Column="2" Grid.ColumnSpan="2" Command="{Binding LeftArrowClick}">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <OnPlatform.WinPhone>Assets/left.png</OnPlatform.WinPhone>
+                    <OnPlatform.Android>left.png</OnPlatform.Android>
+                    <OnPlatform.iOS>left.png</OnPlatform.iOS>
+                </OnPlatform>
+            </Button.Image>
+        </Button>
+
+        <Button   Grid.Column="4" Grid.ColumnSpan="2" Command="{Binding RightArrowClick}" >
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <OnPlatform.WinPhone>Assets/right.png</OnPlatform.WinPhone>
+                    <OnPlatform.Android>right.png</OnPlatform.Android>
+                    <OnPlatform.iOS>right.png</OnPlatform.iOS>
+                </OnPlatform>
+            </Button.Image>
+        </Button>
+
+        <Label  Text="{Binding CurrentMonthText}" Grid.Column="6" HorizontalTextAlignment="Center" Style="{StaticResource DateLabels}"  />
+        <Label  Text="{Binding CurrentYearText}" Grid.Column="7" HorizontalTextAlignment="End" Style="{StaticResource DateLabels}"/>
+        <BoxView BackgroundColor="#666666" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="14" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <Label  Text="Mon.."  Grid.Column="0" Style="{StaticResource HeaderLabels}"/>
+        <Label Text="Tue.." Grid.Column="2" Style="{StaticResource HeaderLabels}"/>
+        <Label Text="Wed.." Grid.Column="4" Grid.Row="1"  
+                                                 Style="{StaticResource HeaderLabels}"/>
+        <Label  Text="Thu.." Grid.Column="6" Style="{StaticResource HeaderLabels}"/>
+        <Label Text="Fri.." Grid.Column="8"  Style="{StaticResource HeaderLabels}"/>
+        <Label Text="Sat.." Grid.Column="10" Style="{StaticResource HeaderLabels}"/>
+        <Label Text="Sun.." Grid.Column="12" Style="{StaticResource HeaderLabels}"/>
+
+        <BoxView    Style="{StaticResource BoxViews}" Grid.Row="0" VerticalOptions="End" />
+        <BoxView    Style="{StaticResource BoxViews}" Grid.Row="0" VerticalOptions="Start" />
+        <BoxView    Style="{StaticResource BoxViews}" Grid.Row="1" VerticalOptions="End" />
+
+        <local:CustomView BindingContext="{Binding CalendarDays[0]}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[1]}" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[2]}" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[3]}" Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[4]}" Grid.Column="8" Grid.Row="2" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[5]}" Grid.Column="10" Grid.Row="2" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[6]}" Grid.Column="12" Grid.Row="2" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[7]}" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[8]}" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[9]}" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[10]}" Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[11]}" Grid.Column="8" Grid.Row="3" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[12]}" Grid.Column="10" Grid.Row="3" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[13]}" Grid.Column="12" Grid.Row="3" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[14]}" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[15]}" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[16]}" Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[17]}" Grid.Column="6" Grid.Row="4" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[18]}" Grid.Column="8" Grid.Row="4" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[19]}" Grid.Column="10" Grid.Row="4" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[20]}" Grid.Column="12" Grid.Row="4" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[21]}" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[22]}" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[23]}" Grid.Column="4" Grid.Row="5" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[24]}" Grid.Column="6" Grid.Row="5" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[25]}" Grid.Column="8" Grid.Row="5" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[26]}" Grid.Column="10" Grid.Row="5" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[27]}" Grid.Column="12" Grid.Row="5" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[28]}" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[29]}" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[30]}" Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[31]}" Grid.Column="6" Grid.Row="6" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[32]}" Grid.Column="8" Grid.Row="6" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[33]}" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[34]}" Grid.Column="12" Grid.Row="6" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[35]}" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[36]}" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[37]}" Grid.Column="4" Grid.Row="7" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[38]}" Grid.Column="6" Grid.Row="7" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[39]}" Grid.Column="8" Grid.Row="7" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[40]}" Grid.Column="10" Grid.Row="7" Grid.ColumnSpan="2" />
+        <local:CustomView BindingContext="{Binding CalendarDays[41]}" Grid.Column="12" Grid.Row="7" Grid.ColumnSpan="2" />
+
+        <BoxView Grid.Row="2" Grid.Column="13" Grid.RowSpan="6" BackgroundColor="Black" WidthRequest="1" HorizontalOptions="End" />
+    </Grid>
+
+        <StackLayout Margin="30,0" Orientation="Horizontal" VerticalOptions="End" >
+            <Label VerticalOptions="Center"  Text="Task Name:"/>
+            <Picker  Title="Select Task" WidthRequest="170" HorizontalOptions="EndAndExpand" 
+                     ItemsSource="{Binding TaskNamesList}" SelectedItem="{Binding PLEASEWORK}"  >
+
+                <Picker.Behaviors>
+                    <behaviors:EventHandlerBehavior EventName="SelectedIndexChanged">
+                        <behaviors:InvokeCommandAction Command="{Binding SelectedProviderChanged}" />
+                    </behaviors:EventHandlerBehavior>
+                </Picker.Behaviors>
+
+            </Picker>
+        </StackLayout >
+
+
+        <StackLayout Margin="30,0" Orientation="Horizontal" VerticalOptions="End" >
+            <Label  IsVisible="{Binding Visibility}" VerticalOptions="Center" Text="New Task Name:" />
+            <Entry Text="{Binding EntryContent}" IsVisible="{Binding Visibility}"    WidthRequest="170" HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+
+
+        <StackLayout BackgroundColor="Black" Padding="1" HorizontalOptions="Center">
+            <Label Text="Description" HorizontalOptions="Center"></Label>
+            <Editor Text="{Binding Description}" BackgroundColor="White" HeightRequest="200" HorizontalOptions="Center" WidthRequest="280" />
+        </StackLayout>
+    </StackLayout>
+</ContentView>
