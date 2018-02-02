@@ -1,5 +1,8 @@
 # Uni-Project-CMSE-473
-Android Application for managing teams and tasks
+
+Software Project and Management Course:
+
+Multi Platform Application for managing teams and tasks created using Xamarin, C# as a backend language, SQL for the database and Microsoft Azure to host the database. 
 
 Team:
 
