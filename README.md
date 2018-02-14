@@ -2,7 +2,7 @@
 
 Software Project and Management Course:
 
-Multi Platform Application for managing teams and tasks created using Xamarin, C# as a backend language, SQL for the database and Microsoft Azure to host the database. 
+The Team Project Tracker is a Multi-Platform application (Android, iOS, Windows) having a variety of different productive features that are targeted towards employees in teams working for a company or an organization. Technology: XAML, C#, SQL, JSON, Azure, ASP.NET RESTful Web API. 
 
 Team:
 
